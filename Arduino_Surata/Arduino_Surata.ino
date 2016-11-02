@@ -1,5 +1,12 @@
+/*
+ * Codigo para el proyecto Santurban Visible. 
+ * para este se usa un arduino mini pro y un dispositivo FONA 800 
+ * Desarollado por Leonardo Gutierrez leogiga@gmail.com 
+ * 
+ */
+
 #include "Adafruit_FONA.h"
-#define FONA_RX 2
+#define FONA_RX 2 
 #define FONA_TX 9
 #define FONA_RST 4
 #define FONA_KEY 8
