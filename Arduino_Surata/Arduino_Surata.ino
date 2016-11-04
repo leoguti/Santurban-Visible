@@ -1,12 +1,5 @@
-/*
- * Codigo para el proyecto Santurban Visible. 
- * para este se usa un arduino mini pro y un dispositivo FONA 800 
- * Desarollado por Leonardo Gutierrez leogiga@gmail.com 
- * 
- */
-
 #include "Adafruit_FONA.h"
-#define FONA_RX 2 
+#define FONA_RX 2
 #define FONA_TX 9
 #define FONA_RST 4
 #define FONA_KEY 8
@@ -256,8 +249,11 @@ void start_fona(){
     error_led(1);
   }
   OKUN=true;
+  delay(5000);
   fona.setGPRSNetworkSettings(F(APN), F(APN_USER), F(APN_PASS));
+  
   restart_gprs();
+  delay(5000);
   per_bat(); 
   rssi();       
 
@@ -408,4 +404,3 @@ void error_led(int cod_error){
     delay(500);
   }  
 }
-
