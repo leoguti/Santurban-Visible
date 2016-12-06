@@ -179,6 +179,7 @@ void temperature(){
   }
 
 void restart_gprs(){
+  delay(100);
   // Restore the gprs fona to be sure that up is up. 
   if (!fona.enableGPRS(false))
     Serial.println(F("Failed to turn off"));
@@ -251,7 +252,7 @@ void start_fona(){
   OKUN=true;
   delay(5000);
   fona.setGPRSNetworkSettings(F(APN), F(APN_USER), F(APN_PASS));
-  
+  delay(5000);
   restart_gprs();
   delay(5000);
   per_bat(); 
